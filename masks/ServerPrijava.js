@@ -1,0 +1,127 @@
+import  React, {useState} from 'react';
+import { StatusBar } from 'expo-status-bar';
+//Biblioteke Reacta
+import { Formik } from 'formik';
+//React-native koristi biblioteku ikonica skoro sve mozete nac na 
+//https://icongr.am/
+//https://oblador.github.io/react-native-vector-icons/
+//https://icons.expo.fyi/
+import {Octicons,Ionicons} from '@expo/vector-icons';
+//import { Colors } from './../components/styles';
+//Stilovi
+import {
+    StyledContainer,
+    InnerContainer,
+    PageLogo,
+    PageTitle,
+    SubTitle,
+    StyledFormArea,
+    LeftIcon,
+    StyledInputLabel,
+    StyledTextInput,
+    RightIcon,
+    StyledButton,
+    ButtonText,
+    Colors,
+    MsgBox,
+    Line,
+} from './../components/styles';
+import { View } from 'react-native';
+
+const {stil, tamna} = Colors;
+
+//Unosimo redom elemente Login stranice dodjeljujemo im vrijednosti iz style
+//formik ya prijavu mora imat dedikacije loga kao i sifru
+//Formik unosimo handle funkcije koje ce se izvrsiti on submit
+const ServerPrijava = () => {
+    //obaveyno svaki useState deklarisati
+    const [hidePassword,setHidePassword] = useState(true);
+
+    return(
+        <StyledContainer>
+            <StatusBar style="dark"/>
+            <InnerContainer>
+                <PageLogo resizeMode="cover" source={require('./../assets/LogoApp.png')} />
+                <PageTitle></PageTitle>
+                <SubTitle></SubTitle>
+
+                <Formik 
+                initialValues={{email:'',password:''}}
+                onSubmit={(values)=>{
+                    console.log(values);
+                }}
+                >
+                    {({handleChange, handleBlur, handleSubmit, values}) => 
+                    //KOMPLETNO MIJENJANJE SAMO PRIVREMENO 
+                    (<StyledFormArea>
+                        <MyTextInput 
+                        label="IP adresa:"
+                        icon="globe"
+                        placeholder="192.0.0.7"
+                        placeholderTextColor={tamna}
+                        onChangeText={handleChange('email')}
+                        onBlur={handleBlur('email')}
+                        value={values.email}
+                        keyboardType="email-address"
+                        />
+                        <MyTextInput 
+                        label="Port:"
+                        icon="code"
+                        placeholder=":3000"
+                        placeholderTextColor={tamna}
+                        onChangeText={handleChange('email')}
+                        onBlur={handleBlur('email')}
+                        value={values.email}
+                        keyboardType="email-address"
+                        />
+                        <MyTextInput 
+                        label="Objekat:"
+                        icon="archive"
+                        placeholder="Hangar"
+                        placeholderTextColor={tamna}
+                        onChangeText={handleChange('email')}//trenutno mail
+                        onBlur={handleBlur('email')}//trenutno mail
+                        value={values.email}//trenutno mail
+                        keyboardType="email-address"//trenutno mail
+                        />
+                        <MsgBox></MsgBox>
+                        
+                        <StyledButton>
+                            <ButtonText>
+                                SERVER PRIJAVA
+                            </ButtonText>
+                        </StyledButton>
+                    </StyledFormArea>)}
+                </Formik>
+            </InnerContainer>
+        </StyledContainer>
+    );
+    ///////////////////////////////////////////////////////ERROR
+    //<StyledButton>
+                      //      <ButtonText>
+                            //    PRIJAVA
+                         //   </ButtonText>
+                      //  </StyledButton>
+                  //      <Line/>
+}
+//koristimo react native props
+//props zadajemo po potrebi i mogu kanije biti dodati
+//ZA SAD NE DIRATI
+const MyTextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ...props}) => {
+    return(
+        <View>
+            <LeftIcon><Octicons name={icon} size={30} color={stil} /></LeftIcon>
+            <StyledInputLabel>{label}</StyledInputLabel>
+            <StyledTextInput {...props} />
+            {isPassword && (
+                <RightIcon onPress={()=>setHidePassword(!hidePassword)}>
+                     <Ionicons name={hidePassword ? 'md-eye-off' : 'md-eye'} size={30} color={tamna}/>
+                </RightIcon>
+            )}
+        </View>
+    );
+};
+
+//(NAPOMENA SEBI) OBAVEZNO PROMIJENITI OCTICONS
+
+export default ServerPrijava;

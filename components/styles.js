@@ -13,10 +13,11 @@ export const Colors = {
   stil: '#6D28D9',
   zelena: '#10B981',
   crvena: '#EF4444',
-  bjl:'#ffffff'
+  bjl:'#ffffff',
+  moja:'#9F80FF',
 };
 
-const {simbol, prv, drg, tamna, stil, zelena, crvena} = Colors;
+const {simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja} = Colors;
 
 export const StyledContainer = styled.View`
   flex: 1;
@@ -128,5 +129,22 @@ export const MsgBox = styled.Text`
 export const Line = styled.View`
   height: 1px;
   width: 100%;
-  background-color: ${tamna}
+  background-color: ${tamna};
+`;
+
+export const NewButton = styled.TouchableOpacity`
+  padding: 5px;
+  background-color: ${moja};
+  
+  border-radius: 30px;
+  margin-vertical: 5px;
+  height: 110px;
+  width: 150%;
+`;
+//justify-content: center;
+//align-items: center;
+export const ButtonTextDash = styled.Text`
+  color: ${simbol};
+  font-size: 22px;
+  font-weight: bold;
 `;
