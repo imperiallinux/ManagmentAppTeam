@@ -138,7 +138,7 @@ export const NewButton = styled.TouchableOpacity`
   
   border-radius: 30px;
   margin-vertical: 5px;
-  height: 110px;
+  height: 150px;
   width: 150%;
 `;
 //justify-content: center;

@@ -1,4 +1,5 @@
 import  React, {useState} from 'react';
+import { ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import {Octicons,Ionicons} from '@expo/vector-icons';
 import {
@@ -25,6 +26,7 @@ import { View } from 'react-native';
 const Dashboard = () => {
     return(
         <StyledContainer>
+             <ScrollView>
             <StatusBar style="dark"/>
             <InnerContainer>
                 <StyledFormArea>
@@ -60,6 +62,7 @@ const Dashboard = () => {
                     </NewButton>
                 </StyledFormArea>
             </InnerContainer>
+            </ScrollView>
         </StyledContainer>
     );
 }
