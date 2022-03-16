@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 
 const StatusBarHeight = Constants.StatusBarHeight;
@@ -13,22 +13,32 @@ export const Colors = {
   stil: '#6D28D9',
   zelena: '#10B981',
   crvena: '#EF4444',
-  bjl:'#ffffff',
-  moja:'#9F80FF',
+  bjl: '#ffffff',
+  moja: '#9F80FF',
 };
 
-const {simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja} = Colors;
+const { simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja } = Colors;
 
 export const StyledContainer = styled.View`
   flex: 1;
   padding: 25px;
   padding-top: 50px;
   background-color: ${simbol};
+  
 `;
+export const StyledContainerDash = styled.View`
+  flex: 1;
+  padding: 5px;
+  padding-top: 5px;
+  background-color: ${simbol};
+
+`;
+
 export const InnerContainer = styled.View`
   flex: 1;
   width: 100%;
   align-items: center;
+  
 `;
 
 export const PageLogo = styled.Image`
@@ -41,8 +51,8 @@ export const PageTitle = styled.Text`
   text-align: center;
   color: ${stil};
   
-`;//font-weight: Bold;padding: 10px;
-
+`;
+//font-weight: Bold;padding: 10px;
 export const SubTitle = styled.Text`
   font-size: 20px;
   letter-spacing; 1px;
@@ -133,13 +143,13 @@ export const Line = styled.View`
 `;
 
 export const NewButton = styled.TouchableOpacity`
-  padding: 5px;
+  padding: 10px;
   background-color: ${moja};
-  
+  margin-right: 10px;
   border-radius: 30px;
   margin-vertical: 5px;
   height: 110px;
-  width: 150%;
+  width: 50%;
 `;
 //justify-content: center;
 //align-items: center;
@@ -148,3 +158,4 @@ export const ButtonTextDash = styled.Text`
   font-size: 22px;
   font-weight: bold;
 `;
+

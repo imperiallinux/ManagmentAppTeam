@@ -42,7 +42,7 @@ const Prijava = () => {
             <StatusBar style="dark"/>
             <InnerContainer>
                 <PageLogo resizeMode="cover" source={require('./../assets/LogoApp.png')} />
-                <PageTitle></PageTitle>
+                <PageTitle>Managment App</PageTitle>
                 <SubTitle></SubTitle>
 
                 <Formik 
