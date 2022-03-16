@@ -16,26 +16,14 @@ export const Colors = {
   bjl: '#ffffff',
   moja: '#9F80FF',
 };
-<<<<<<< HEAD
-//'#EFEDFB'
-const {simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja} = Colors;
-=======
 
 const { simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja } = Colors;
->>>>>>> 955df3b0aff06724a2c145efade4eeb8d7cad4cd
 
 export const StyledContainer = styled.View`
   flex: 1;
-<<<<<<< HEAD
-  padding: 25px;
-  padding-top: 50px;
-  background-color: ${simbol};
-  
-=======
   padding: 5px;
   padding-top: 25px;
   backgroundColor: ${simbol};
->>>>>>> aa2c68a1b542c19a333e767a79b0089912e513bb
 `;
 export const StyledContainerDash = styled.View`
   flex: 1;
@@ -160,13 +148,6 @@ export const NewButton = styled.TouchableOpacity`
   margin-right: 10px;
   border-radius: 30px;
   margin-vertical: 5px;
-<<<<<<< HEAD
-  height: 110px;
-  width: 50%;
-=======
-  height: 150px;
-  width: 150%;
->>>>>>> aa2c68a1b542c19a333e767a79b0089912e513bb
 `;
 //justify-content: center;
 //align-items: center;
