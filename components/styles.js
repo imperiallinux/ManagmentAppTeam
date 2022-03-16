@@ -111,6 +111,7 @@ export const StyledButton = styled.TouchableOpacity`
   shadowOffset: {
     height: 2px,
     width: 2px,
+    
   };
   elevation: 15;
 `;
