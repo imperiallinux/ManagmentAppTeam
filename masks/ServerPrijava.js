@@ -1,4 +1,5 @@
 import  React, {useState} from 'react';
+import { ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 //Biblioteke Reacta
 import { Formik } from 'formik';
@@ -39,6 +40,7 @@ const ServerPrijava = () => {
 
     return(
         <StyledContainer>
+            <ScrollView>
             <StatusBar style="dark"/>
             <InnerContainer>
                 <PageLogo resizeMode="cover" source={require('./../assets/LogoApp.png')} />
@@ -59,30 +61,30 @@ const ServerPrijava = () => {
                         icon="globe"
                         placeholder="192.0.0.7"
                         placeholderTextColor={tamna}
-                        onChangeText={handleChange('email')}
-                        onBlur={handleBlur('email')}
-                        value={values.email}
-                        keyboardType="email-address"
+                        onChangeText={handleChange('text')}
+                        onBlur={handleBlur('text')}
+                        value={values.text}
+                        keyboardType="text"
                         />
                         <MyTextInput 
                         label="Port:"
                         icon="code"
                         placeholder=":3000"
                         placeholderTextColor={tamna}
-                        onChangeText={handleChange('email')}
-                        onBlur={handleBlur('email')}
-                        value={values.email}
-                        keyboardType="email-address"
+                        onChangeText={handleChange('port')}
+                        onBlur={handleBlur('port')}
+                        value={values.port}
+                        keyboardType="text"
                         />
                         <MyTextInput 
                         label="Objekat:"
                         icon="archive"
                         placeholder="Hangar"
                         placeholderTextColor={tamna}
-                        onChangeText={handleChange('email')}//trenutno mail
-                        onBlur={handleBlur('email')}//trenutno mail
-                        value={values.email}//trenutno mail
-                        keyboardType="email-address"//trenutno mail
+                        onChangeText={handleChange('objekat')}//trenutno mail
+                        onBlur={handleBlur('objekat')}//trenutno mail
+                        value={values.objekat}//trenutno mail
+                        keyboardType="text"//trenutno mail
                         />
                         <MsgBox></MsgBox>
                         
@@ -94,6 +96,7 @@ const ServerPrijava = () => {
                     </StyledFormArea>)}
                 </Formik>
             </InnerContainer>
+            </ScrollView>
         </StyledContainer>
     );
     ///////////////////////////////////////////////////////ERROR

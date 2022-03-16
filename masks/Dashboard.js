@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState, Component } from 'react';
+=======
+import  React, {useState} from 'react';
+import { ScrollView } from 'react-native';
+>>>>>>> aa2c68a1b542c19a333e767a79b0089912e513bb
 import { StatusBar } from 'expo-status-bar';
 import { Octicons, Ionicons } from '@expo/vector-icons';
 import {
@@ -28,6 +33,7 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native
 const dataList = [{ key: '1' }, { key: '2' }, { key: '3' }, { key: '4' }, { key: '5' }, { key: '6' }]
 const numColumns = 2
 
+<<<<<<< HEAD
 export default class App1 extends (React.Component){
     _renderItem = ({item, index}) => {
         
@@ -59,6 +65,50 @@ export default class App1 extends (React.Component){
         )
     }
     
+=======
+const Dashboard = () => {
+    return(
+        <StyledContainer>
+            <ScrollView>
+            <StatusBar style="dark"/>
+            <InnerContainer>
+                <StyledFormArea>
+                    <NewButton>
+                        <ButtonTextDash>
+                            Provjera
+                        </ButtonTextDash>
+                    </NewButton>
+                    <NewButton>
+                        <ButtonTextDash>
+                            Popis
+                        </ButtonTextDash>
+                    </NewButton>
+                    <NewButton>
+                        <ButtonTextDash>
+                            Provjera dokumentacije
+                        </ButtonTextDash>
+                    </NewButton>
+                    <NewButton>
+                        <ButtonTextDash>
+                            Kreiranje predracuna
+                        </ButtonTextDash>
+                    </NewButton>
+                    <NewButton>
+                        <ButtonTextDash>
+                            Prijem robe
+                        </ButtonTextDash>
+                    </NewButton>
+                    <NewButton>
+                        <ButtonTextDash>
+                            Prenos
+                        </ButtonTextDash>
+                    </NewButton>
+                </StyledFormArea>
+            </InnerContainer>
+            </ScrollView>
+        </StyledContainer>
+    );
+>>>>>>> aa2c68a1b542c19a333e767a79b0089912e513bb
 }
 const styles  = StyleSheet.create({
         container: {
