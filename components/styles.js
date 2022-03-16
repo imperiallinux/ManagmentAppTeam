@@ -6,7 +6,7 @@ const StatusBarHeight = Constants.StatusBarHeight;
 
 //Boje u cjeloj aplikaciji
 export const Colors = {
-  simbol: '#EFEDFB',
+  simbol: '#ffffff',
   prv: '#E5E7EB',
   drg: '#1f2937',
   tamna: '#9CA3AF',
@@ -16,7 +16,7 @@ export const Colors = {
   bjl:'#ffffff',
   moja:'#9F80FF',
 };
-
+//'#EFEDFB'
 const {simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja} = Colors;
 
 export const StyledContainer = styled.View`
@@ -103,8 +103,8 @@ export const StyledButton = styled.TouchableOpacity`
   align-items: center;
   border-radius: 30px;
   margin-vertical: 15px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 45px;
+  margin-right: 45px;
   height: 60px;
   shadowOpacity: 0.9;
   shadowRadius: 10;
@@ -118,7 +118,7 @@ export const StyledButton = styled.TouchableOpacity`
 
 export const ButtonText = styled.Text`
   color: ${simbol};
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 `;
 
@@ -146,6 +146,6 @@ export const NewButton = styled.TouchableOpacity`
 //align-items: center;
 export const ButtonTextDash = styled.Text`
   color: ${simbol};
-  font-size: 22px;
+  font-size: 16px;
   font-weight: bold;
 `;
