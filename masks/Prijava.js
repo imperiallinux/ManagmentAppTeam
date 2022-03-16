@@ -1,4 +1,5 @@
 import  React, {useState} from 'react';
+import { ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 //Biblioteke Reacta
 import { Formik } from 'formik';
@@ -39,6 +40,7 @@ const Prijava = () => {
 
     return(
         <StyledContainer>
+            <ScrollView>
             <StatusBar style="dark"/>
             <InnerContainer>
                 <PageLogo resizeMode="cover" source={require('./../assets/LogoApp.png')} />
@@ -91,6 +93,7 @@ const Prijava = () => {
                     </StyledFormArea>)}
                 </Formik>
             </InnerContainer>
+            </ScrollView>
         </StyledContainer>
     );
 }
