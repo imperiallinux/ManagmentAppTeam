@@ -6,7 +6,7 @@ import ServerPrijava from './masks/ServerPrijava';
 import Dashboard from './masks/Dashboard';
 
 export default function App() {
-  return <Prijava />;
+  return <Dashboard/>;
 }
 
 //Prijava
