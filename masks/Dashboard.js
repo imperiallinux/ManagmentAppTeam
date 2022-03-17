@@ -12,7 +12,15 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native
 const numColumns = 2
 const styles  = StyleSheet.create({
         container: {
+<<<<<<< HEAD
             paddingTop: 25
+=======
+<<<<<<< HEAD
+            paddingTop: 25
+=======
+            paddingTop: 45
+>>>>>>> a5dd6de5419aad4a19885bdfde311d71cb244138
+>>>>>>> 8836ea679e7984870bb3247687bcad404ef404f7
         },
       
         itemStyle: {
