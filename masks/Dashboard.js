@@ -1,14 +1,22 @@
 import React, { useState, Component } from 'react';
 import { ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { Octicons, Ionicons } from '@expo/vector-icons';
+import { Octicons, Ionicons, FontAwesome5 } from '@expo/vector-icons';
 import { StyledContainerDash } from '../components/styles';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native'
-const dataList = [{ key: '1' }, { key: '2' }, { key: '3' }, { key: '4' }, { key: '5' }, { key: '6' }]
+
+ const dataList = [{ key: 'Skeniraj' ,it: 'qr-code'}, { key: 'Popis', it1: 'clipboard-list' }, 
+ { key: 'Provjera dokumenta',it1: 'clipboard-check' }, { key: 'Kreiranje predračuna' , it1: 'file-invoice-dollar'},
+  { key: 'Prijem robe',it1:'cubes' }, { key: 'Prenos', it1: 'truck'}]
+
 const numColumns = 2
 const styles  = StyleSheet.create({
         container: {
+<<<<<<< HEAD
             paddingTop: 25
+=======
+            paddingTop: 45
+>>>>>>> a5dd6de5419aad4a19885bdfde311d71cb244138
         },
       
         itemStyle: {
@@ -23,7 +31,9 @@ const styles  = StyleSheet.create({
       
         itemText: { 
           color: '#fff',
-          fontSize: 30
+          fontSize: 20,
+          textAlign: 'center',
+          justifyContent: 'center',
         },
       });
 
@@ -36,7 +46,13 @@ export default class App1 extends React.Component{
             
         <TouchableOpacity>
             <View style = {itemStyle}>
+                <Text style={itemText}>
+                    <Ionicons name = {item.it} size={70} color = '#fff'/>
+                    <FontAwesome5 name = {item.it1} size={70} color = '#fff'/>
+                </Text>
                 <Text style={itemText}>{item.key}</Text>
+                
+
             </View>
         </TouchableOpacity>
             

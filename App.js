@@ -12,7 +12,7 @@ import App1 from './masks/Dashboard';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return <App1 />;g
+  return <App1 />;
 }
 
 

@@ -21,9 +21,9 @@ const { simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja } = Colors;
 
 export const StyledContainer = styled.View`
   flex: 1;
-  padding: 5px;
-  padding-top: 25px;
-  backgroundColor: ${simbol};
+  padding: 25px;
+  padding-top: 100px;
+  background-color: ${simbol};
 `;
 export const StyledContainerDash = styled.View`
   flex: 1;
@@ -41,19 +41,19 @@ export const InnerContainer = styled.View`
 `;
 
 export const PageLogo = styled.Image`
-  width: 250px;
-  height: 200px;
+  width: 280px;
+  height: 210px;
 `;
 
 export const PageTitle = styled.Text`
-  font-size: 5px;
+  font-size: 30px;
   text-align: center;
   color: ${stil};
   
 `;
 //font-weight: Bold;padding: 10px;
 export const SubTitle = styled.Text`
-  font-size: 5px;
+  font-size: 20px;
   letter-spacing; 1px;
   font-weight: bold;
   color: ${stil};
@@ -120,7 +120,6 @@ export const StyledButton = styled.TouchableOpacity`
   shadowOffset: {
     height: 2px,
     width: 2px,
-    
   };
   elevation: 15;
 `;
