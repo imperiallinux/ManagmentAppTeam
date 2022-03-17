@@ -8,7 +8,7 @@ const dataList = [{ key: '1' }, { key: '2' }, { key: '3' }, { key: '4' }, { key:
 const numColumns = 2
 const styles  = StyleSheet.create({
         container: {
-            paddingTop: 5
+            paddingTop: 25
         },
       
         itemStyle: {
