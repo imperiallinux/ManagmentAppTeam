@@ -1,23 +1,23 @@
 import styled from 'styled-components';
-import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 
 const StatusBarHeight = Constants.StatusBarHeight;
 
 //Boje u cjeloj aplikaciji
 export const Colors = {
-  simbol: '#EFEDFB',
+  simbol: '#ffffff',
   prv: '#E5E7EB',
   drg: '#1f2937',
   tamna: '#9CA3AF',
   stil: '#6D28D9',
   zelena: '#10B981',
   crvena: '#EF4444',
-  bjl:'#ffffff',
-  moja:'#9F80FF',
+  bjl: '#ffffff',
+  moja: '#9F80FF',
 };
 
-const {simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja} = Colors;
+const { simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja } = Colors;
 
 export const StyledContainer = styled.View`
   flex: 1;
@@ -25,10 +25,19 @@ export const StyledContainer = styled.View`
   padding-top: 100px;
   background-color: ${simbol};
 `;
+export const StyledContainerDash = styled.View`
+  flex: 1;
+  padding: 5px;
+  padding-top: 5px;
+  background-color: ${simbol};
+
+`;
+
 export const InnerContainer = styled.View`
   flex: 1;
   width: 100%;
   align-items: center;
+  
 `;
 
 export const PageLogo = styled.Image`
@@ -41,8 +50,8 @@ export const PageTitle = styled.Text`
   text-align: center;
   color: ${stil};
   
-`;//font-weight: Bold;padding: 10px;
-
+`;
+//font-weight: Bold;padding: 10px;
 export const SubTitle = styled.Text`
   font-size: 20px;
   letter-spacing; 1px;
@@ -103,8 +112,8 @@ export const StyledButton = styled.TouchableOpacity`
   align-items: center;
   border-radius: 30px;
   margin-vertical: 15px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 45px;
+  margin-right: 45px;
   height: 60px;
   shadowOpacity: 0.9;
   shadowRadius: 10;
@@ -117,7 +126,7 @@ export const StyledButton = styled.TouchableOpacity`
 
 export const ButtonText = styled.Text`
   color: ${simbol};
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 `;
 
@@ -133,18 +142,17 @@ export const Line = styled.View`
 `;
 
 export const NewButton = styled.TouchableOpacity`
-  padding: 5px;
+  padding: 10px;
   background-color: ${moja};
-  
+  margin-right: 10px;
   border-radius: 30px;
   margin-vertical: 5px;
-  height: 150px;
-  width: 150%;
 `;
 //justify-content: center;
 //align-items: center;
 export const ButtonTextDash = styled.Text`
   color: ${simbol};
-  font-size: 22px;
+  font-size: 16px;
   font-weight: bold;
 `;
+
