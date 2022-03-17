@@ -2,17 +2,17 @@ import React, { useState, Component } from 'react';
 import { ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Octicons, Ionicons, FontAwesome5 } from '@expo/vector-icons';
-import { StyledContainerDash } from '../components/styles';
+import { InnerContainer, StyledContainerDash, TaskBar, MsgBox } from '../components/styles';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native'
 
- const dataList = [{ key: 'Skeniraj' ,it: 'qr-code'}, { key: 'Popis', it1: 'clipboard-list' }, 
+ const dataList = [{ key: 'Skeniranje' ,it: 'qr-code'}, { key: 'Popis', it1: 'clipboard-list' }, 
  { key: 'Provjera dokumenta',it1: 'clipboard-check' }, { key: 'Kreiranje predračuna' , it1: 'file-invoice-dollar'},
   { key: 'Prijem robe',it1:'cubes' }, { key: 'Prenos', it1: 'truck'}]
 
 const numColumns = 2
 const styles  = StyleSheet.create({
         container: {
-            paddingTop: 45
+            paddingTop: 25
         },
       
         itemStyle: {
@@ -21,7 +21,7 @@ const styles  = StyleSheet.create({
           justifyContent: 'center',
           height: 150,
           flex: 1,
-          borderRadius: 10,
+          borderRadius: 7,
 
         },
       
@@ -33,13 +33,14 @@ const styles  = StyleSheet.create({
         },
       });
 
-export default class App1 extends React.Component{
+class App1 extends React.Component{
+  
     _renderItem = ({item, index}) => {
         
         const{itemStyle, itemText} = styles;
         return (
+           
         <StyledContainerDash>
-            
         <TouchableOpacity>
             <View style = {itemStyle}>
                 <Text style={itemText}>
@@ -51,12 +52,13 @@ export default class App1 extends React.Component{
 
             </View>
         </TouchableOpacity>
-            
         </StyledContainerDash>
+       
         )
     }
 
     render() {
+
         const {container, itemText} = styles;
         return(
             <View style = {container}>
@@ -116,4 +118,4 @@ export default class App1 extends React.Component{
 //     );
 // }
 
-// export default Dashboard;
+ export default App1;

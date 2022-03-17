@@ -22,7 +22,7 @@ const { simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja } = Colors;
 export const StyledContainer = styled.View`
   flex: 1;
   padding: 25px;
-  padding-top: 100px;
+  padding-top: 50px;
   background-color: ${simbol};
 `;
 export const StyledContainerDash = styled.View`
@@ -90,6 +90,7 @@ export const StyledInputLabel = styled.Text`
 `;
 
 export const LeftIcon = styled.View`
+background-color: black;
   left: 15px;
   top: 38px;
   position: absolute;
@@ -100,6 +101,14 @@ export const LeftIcon = styled.View`
 export const RightIcon = styled.TouchableOpacity`
   right: 15px;
   top: 38px;
+  position: absolute;
+  z-index: 1;
+  elevation: 16;
+`;
+
+export const RightButton = styled.TouchableOpacity`
+  right: 0px;
+  top: 0px;
   position: absolute;
   z-index: 1;
   elevation: 16;
@@ -155,4 +164,19 @@ export const ButtonTextDash = styled.Text`
   font-size: 16px;
   font-weight: bold;
 `;
+
+export const TaskBar = styled.View`
+marginTop: 24px;
+width: 100%;
+height: 53px;
+backgroundColor: #6D28D9;
+`;
+
+export const TaskBarButton = styled.TouchableOpacity`
+ background-color: ${stil};
+  border-radius: 5px;
+  width: 20%;
+  height: 50px;
+`;
+
 
