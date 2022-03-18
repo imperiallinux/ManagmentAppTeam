@@ -15,9 +15,10 @@ export const Colors = {
   crvena: '#EF4444',
   bjl: '#ffffff',
   moja: '#9F80FF',
+  task: '#e9e5fc'
 };
 
-const { simbol, prv, drg, tamna, stil, zelena, crvena, bji, moja } = Colors;
+const { simbol, prv, drg, tamna, stil, zelena, crvena, bjl, moja, task } = Colors;
 
 export const StyledContainer = styled.View`
   flex: 1;
@@ -106,13 +107,6 @@ export const RightIcon = styled.TouchableOpacity`
   elevation: 16;
 `;
 
-export const RightButton = styled.TouchableOpacity`
-  right: 0px;
-  top: 0px;
-  position: absolute;
-  z-index: 1;
-  elevation: 16;
-`;
 
 export const StyledButton = styled.TouchableOpacity`
   padding: 15px;
@@ -166,14 +160,27 @@ export const ButtonTextDash = styled.Text`
 `;
 
 export const TaskBar = styled.View`
-marginTop: 24px;
+flex: 1;
+marginTop: 20px;
 width: 100%;
-height: 53px;
-backgroundColor: #6D28D9;
+height: 150%;
+backgroundColor: ${task};
 `;
 
 export const TaskBarButton = styled.TouchableOpacity`
- background-color: ${stil};
+ background-color: ${task};
+ top: 1.5%;
+ left:0%;
+  border-radius: 5px;
+  width: 20%;
+  height: 50px;
+`;
+export const RightButton = styled.TouchableOpacity`
+  left: 84%;
+  top: 1.5%;
+  position: absolute;
+
+  background-color: ${task};
   border-radius: 5px;
   width: 20%;
   height: 50px;

@@ -2,32 +2,26 @@ import React, { useState, Component } from 'react';
 import { ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Octicons, Ionicons, FontAwesome5 } from '@expo/vector-icons';
-import { InnerContainer, StyledContainerDash, TaskBar, MsgBox } from '../components/styles';
+import { InnerContainer, StyledContainerDash} from '../components/styles';
+import TtaskBar from './GlavnaMaska';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native'
 
  const dataList = [{ key: 'Skeniranje' ,it: 'qr-code'}, { key: 'Popis', it1: 'clipboard-list' }, 
- { key: 'Provjera dokumenta',it1: 'clipboard-check' }, { key: 'Kreiranje predračuna' , it1: 'file-invoice-dollar'},
+ { key: 'Provjera dokumenta',it1: 'clipboard-check' }, ,{ key: 'Kreiranje predračuna' , it1: 'file-invoice-dollar'},
   { key: 'Prijem robe',it1:'cubes' }, { key: 'Prenos', it1: 'truck'}]
 
 const numColumns = 2
 const styles  = StyleSheet.create({
         container: {
-<<<<<<< HEAD
-            paddingTop: 25
-=======
-<<<<<<< HEAD
-            paddingTop: 25
-=======
-            paddingTop: 45
->>>>>>> a5dd6de5419aad4a19885bdfde311d71cb244138
->>>>>>> 8836ea679e7984870bb3247687bcad404ef404f7
+            paddingTop: 12,
+            paddingBottom: 50,
         },
       
         itemStyle: {
           backgroundColor: '#6D28D9',
           alignItems: 'center',
           justifyContent: 'center',
-          height: 150,
+          height: 150, 
           flex: 1,
           borderRadius: 7,
 
@@ -42,14 +36,15 @@ const styles  = StyleSheet.create({
       });
 
 class App1 extends React.Component{
-  
+
     _renderItem = ({item, index}) => {
         
         const{itemStyle, itemText} = styles;
         return (
-           
         <StyledContainerDash>
+              <ScrollView>
         <TouchableOpacity>
+            
             <View style = {itemStyle}>
                 <Text style={itemText}>
                     <Ionicons name = {item.it} size={70} color = '#fff'/>
@@ -60,6 +55,7 @@ class App1 extends React.Component{
 
             </View>
         </TouchableOpacity>
+        </ScrollView>
         </StyledContainerDash>
        
         )

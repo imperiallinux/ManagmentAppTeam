@@ -1,21 +1,29 @@
 import React from "react";
-import {TaskBar,TaskBarButton, RightButton} from "../components/styles";
+import {TaskBar,TaskBarButton, RightButton, MsgBox} from "../components/styles";
 import {Ionicons} from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
+import App1 from "./Dashboard";
+import { ScrollView } from "react-native-gesture-handler";
  
-const taskBar = () =>{
+const TtaskBar = () =>{
 return(
-    
     <TaskBar>
+        
         <TaskBarButton>
-            <Ionicons name = "menu" size={50} color = '#fff'/>
+            <Ionicons name = "menu" size={50} color = '#6D28D9'/>
             </TaskBarButton>
             <RightButton >
-            <Ionicons name = "sync-circle-outline" size={50} color = '#fff'/>
+            <Ionicons name = "md-sync" size={50} color = '#6D28D9'/>
             </RightButton>
+            
+            <App1>
+               
+            </App1>
+            
+            
     </TaskBar>
 
 )
 }
 
-export default taskBar;
+export default TtaskBar;
