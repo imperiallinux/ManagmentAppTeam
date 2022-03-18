@@ -22,8 +22,8 @@ const { simbol, prv, drg, tamna, stil, zelena, crvena, bjl, moja, task } = Color
 
 export const StyledContainer = styled.View`
   flex: 1;
-  padding: 25px;
-  padding-top: 50px;
+  padding: 1px;
+  padding-top: 10px;
   background-color: ${simbol};
 `;
 export const StyledContainerDash = styled.View`
@@ -91,12 +91,11 @@ export const StyledInputLabel = styled.Text`
 `;
 
 export const LeftIcon = styled.View`
-background-color: black;
   left: 15px;
   top: 38px;
   position: absolute;
   z-index: 1;
-  elevation: 16;
+  elevation: 15;
 `;
 
 export const RightIcon = styled.TouchableOpacity`
@@ -104,7 +103,7 @@ export const RightIcon = styled.TouchableOpacity`
   top: 38px;
   position: absolute;
   z-index: 1;
-  elevation: 16;
+  elevation: 15;
 `;
 
 

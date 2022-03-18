@@ -37,15 +37,15 @@ const {stil, tamna} = Colors;
 const Prijava = () => {
     //obaveyno svaki useState deklarisati
     const [hidePassword,setHidePassword] = useState(true);
-
+//<PageTitle></PageTitle>
+ //               <SubTitle></SubTitle>
     return(
         <StyledContainer>
             <ScrollView>
             <StatusBar style="dark"/>
             <InnerContainer>
                 <PageLogo resizeMode="cover" source={require('./../assets/LogoApp.png')} />
-                <PageTitle>Managment App</PageTitle>
-                <SubTitle></SubTitle>
+                
 
                 <Formik 
                 initialValues={{email:'',password:''}}
