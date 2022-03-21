@@ -159,17 +159,16 @@ export const ButtonTextDash = styled.Text`
 `;
 
 export const TaskBar = styled.View`
-flex: 1;
-marginTop: 20px;
-width: 100%;
-height: 150%;
-backgroundColor: ${task};
+  flex: 1;
+  width: 100%;
+  height: 150%;
+  backgroundColor: ${task};
 `;
 
 export const TaskBarButton = styled.TouchableOpacity`
- background-color: ${task};
- top: 1.5%;
- left:0%;
+  background-color: ${task};
+  top: 1.5%;
+  left:0%;
   border-radius: 5px;
   width: 20%;
   height: 50px;

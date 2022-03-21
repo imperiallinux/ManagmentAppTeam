@@ -6,7 +6,7 @@ import { InnerContainer, StyledContainerDash} from '../components/styles';
 import TtaskBar from './GlavnaMaska';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native'
 
- const dataList = [{ key: 'Skeniranje' ,it: 'qr-code'}, { key: 'Popis', it1: 'clipboard-list' }, 
+ const dataList = [{ key: 'Skeniranje' ,it: 'qr-code-outline'}, { key: 'Popis', it1: 'clipboard-list' }, 
  { key: 'Provjera dokumenta',it1: 'clipboard-check' }, ,{ key: 'Kreiranje predračuna' , it1: 'file-invoice-dollar'},
   { key: 'Prijem robe',it1:'cubes' }, { key: 'Prenos', it1: 'truck'}]
 
