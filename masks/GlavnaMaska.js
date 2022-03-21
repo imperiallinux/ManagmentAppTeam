@@ -1,12 +1,17 @@
 import React from "react";
-import {TaskBar,TaskBarButton, RightButton, MsgBox} from "../components/styles";
+import {TaskBar,TaskBarButton, RightButton, MsgBox, Colors} from "../components/styles";
 import {Ionicons} from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import App1 from "./Dashboard";
 import { ScrollView } from "react-native-gesture-handler";
+import { View } from "react-native";
+
+const {stil, tamna} = Colors;
  
 const TtaskBar = () =>{
+
 return(
+    
     <TaskBar>
         
         <TaskBarButton>
@@ -22,6 +27,7 @@ return(
             
             
     </TaskBar>
+    
 
 )
 }

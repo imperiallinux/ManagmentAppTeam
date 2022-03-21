@@ -38,7 +38,7 @@ const Prijava = () => {
     //obaveyno svaki useState deklarisati
     const [hidePassword,setHidePassword] = useState(true);
 //<PageTitle></PageTitle>
- //               <SubTitle></SubTitle>
+ //<SubTitle></SubTitle>
     return(
         <StyledContainer>
             <ScrollView>
@@ -77,6 +77,16 @@ const Prijava = () => {
                         isPassword={true}
                         hidePassword={hidePassword}
                         setHidePassword={setHidePassword}
+                        />
+                        <MyTextInput 
+                        label="Objekat:"
+                        icon="archive"
+                        placeholder="Skladište"
+                        placeholderTextColor={tamna}
+                        onChangeText={handleChange('objekat')}//trenutno mail
+                        onBlur={handleBlur('objekat')}//trenutno mail
+                        value={values.objekat}//trenutno mail
+                        keyboardType="text"//trenutno mail
                         />
                         <MsgBox></MsgBox>
                         <StyledButton>

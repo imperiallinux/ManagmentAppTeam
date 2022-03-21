@@ -14,8 +14,8 @@ import TtaskBar from './masks/GlavnaMaska';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return <ServerPrijava />;
+  return <TtaskBar />;
 }
 
 
-//Prijava
+//ServerPrijava

@@ -41,8 +41,8 @@ const ServerPrijava = () => {
  //<SubTitle></SubTitle>
     return(
         <StyledContainer>
+            <StatusBar style="dark" animated = {true}/>
             <ScrollView>
-            <StatusBar style="dark"/>
             <InnerContainer>
                 <PageLogo resizeMode="cover" source={require('./../assets/LogoApp.png')} />
                
@@ -76,18 +76,7 @@ const ServerPrijava = () => {
                         value={values.port}
                         keyboardType="text"
                         />
-                        <MyTextInput 
-                        label="Objekat:"
-                        icon="archive"
-                        placeholder="Hangar"
-                        placeholderTextColor={tamna}
-                        onChangeText={handleChange('objekat')}//trenutno mail
-                        onBlur={handleBlur('objekat')}//trenutno mail
-                        value={values.objekat}//trenutno mail
-                        keyboardType="text"//trenutno mail
-                        />
                         <MsgBox></MsgBox>
-                        
                         <StyledButton>
                             <ButtonText>
                                 SERVER PRIJAVA
