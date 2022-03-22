@@ -159,7 +159,7 @@ export const ButtonTextDash = styled.Text`
 `;
 
 export const TaskBar = styled.View`
-paddingTop: 10;
+  padding-top: 10;
   flex: 1;
   width: 100%;
   height: 150%;

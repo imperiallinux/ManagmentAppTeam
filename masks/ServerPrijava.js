@@ -34,7 +34,7 @@ const {stil, tamna} = Colors;
 //Unosimo redom elemente Login stranice dodjeljujemo im vrijednosti iz style
 //formik ya prijavu mora imat dedikacije loga kao i sifru
 //Formik unosimo handle funkcije koje ce se izvrsiti on submit
-const ServerPrijava = () => {
+const ServerPrijava = ({navigation}) => {
     //obaveyno svaki useState deklarisati
     const [hidePassword,setHidePassword] = useState(true);
  //<PageTitle></PageTitle>
@@ -77,9 +77,9 @@ const ServerPrijava = () => {
                         keyboardType="text"
                         />
                         <MsgBox></MsgBox>
-                        <StyledButton>
+                        <StyledButton onPress = {()=> navigation.navigate("Prijava")}>
                             <ButtonText>
-                                SERVER PRIJAVA
+                                PRIJAVA
                             </ButtonText>
                         </StyledButton>
                     </StyledFormArea>)}
