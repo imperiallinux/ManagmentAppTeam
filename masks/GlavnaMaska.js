@@ -16,16 +16,11 @@ return(
         
         <TaskBarButton>
             <Ionicons name = "menu" size={50} color = '#6D28D9'/>
-            </TaskBarButton>
-            <RightButton >
+        </TaskBarButton>
+        <RightButton >
             <Ionicons name = "md-sync" size={50} color = '#6D28D9'/>
-            </RightButton>
-            
-            <App1>
-               
-            </App1>
-            
-            
+        </RightButton>
+        <App1></App1>
     </TaskBar>
     
 
