@@ -89,7 +89,7 @@ const Prijava = ({navigation}) => {
                         keyboardType="text"//trenutno mail
                         />
                         <MsgBox></MsgBox>
-                        <StyledButton onPress = {()=> navigation.navigate("GlavnaMaska")}>
+                        <StyledButton onPress = {()=> navigation.navigate("Dashboard")}>
                             <ButtonText>
                                 PRIJAVA
                             </ButtonText>

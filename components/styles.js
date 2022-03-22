@@ -42,8 +42,8 @@ export const InnerContainer = styled.View`
 `;
 
 export const PageLogo = styled.Image`
-  width: 280px;
-  height: 210px;
+  width: 180px;
+  height: 110px;
 `;
 
 export const PageTitle = styled.Text`
@@ -71,7 +71,7 @@ export const StyledTextInput = styled.TextInput`
   padding-right: 55px;
   border-radius: 15px;
   font-size: 16px;
-  height: 60px;
+  height: 50px;
   margin-vertical: 3px;
   margin-bottom: 10px;
   color: ${drg};
@@ -108,15 +108,15 @@ export const RightIcon = styled.TouchableOpacity`
 
 
 export const StyledButton = styled.TouchableOpacity`
-  padding: 15px;
+  padding: 10px;
   background-color: ${stil};
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  margin-vertical: 15px;
+  margin-vertical: 8px;
   margin-left: 45px;
   margin-right: 45px;
-  height: 60px;
+  height: 50px;
   shadowOpacity: 0.9;
   shadowRadius: 10;
   shadowOffset: {
@@ -138,7 +138,7 @@ export const MsgBox = styled.Text`
 `;
 
 export const Line = styled.View`
-  height: 1px;
+  height: 3px;
   width: 100%;
   background-color: ${tamna};
 `;

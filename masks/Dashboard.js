@@ -4,12 +4,18 @@ import { StatusBar } from 'expo-status-bar';
 import { Octicons, Ionicons, FontAwesome5 } from '@expo/vector-icons';
 import { InnerContainer, StyledContainerDash} from '../components/styles';
 import TtaskBar from './GlavnaMaska';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import 'react-native-gesture-handler';
+import { ServerStyleSheet } from 'styled-components';
+import Prijava from './Prijava';
+import ServerPrijava from './ServerPrijava';
+//za navigaciju
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator  } from '@react-navigation/native-stack';
 
- const dataList = [{ key: 'Skeniranje' ,it: 'qr-code-outline'}, { key: 'Popis', it1: 'clipboard-list' }, 
- { key: 'Provjera dokumenta',it1: 'clipboard-check' }, ,{ key: 'Kreiranje predračuna' , it1: 'file-invoice-dollar'},
-  { key: 'Prijem robe',it1:'cubes' }, { key: 'Prenos', it1: 'truck'}]
-
+const dataList = [{ key: 'Skeniranje' ,it: 'qr-code-outline'}, { key: 'Popis', it1: 'clipboard-list' }, 
+{ key: 'Provjera dokumenta',it1: 'clipboard-check' }, ,{ key: 'Kreiranje predračuna' , it1: 'file-invoice-dollar'},
+{ key: 'Prijem robe',it1:'cubes' }, { key: 'Prenos', it1: 'truck'}]
 const numColumns = 2
 const styles  = StyleSheet.create({
         container: {
@@ -35,25 +41,30 @@ const styles  = StyleSheet.create({
         },
       });
 
-class App1 extends React.Component{
+function MyDrawer ({navigation}){
+    <NavigationContainer>
+        <Drawer.Navigator initialRouteName="Home">
+            <Drawer.Screen name="Home" component={HomeScreen} />
+            <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+        </Drawer.Navigator>
+    </NavigationContainer>
+}
+const Drawer = createDrawerNavigator();
+export default class App1 extends React.Component{
 
     _renderItem = ({item, index}) => {
         
         const{itemStyle, itemText} = styles;
         return (
         <StyledContainerDash>
-              <ScrollView>
+            <ScrollView>
         <TouchableOpacity>
-            
             <View style = {itemStyle}>
-          
                 <Text style={itemText}>
-                    <Ionicons name = {item.it} size={70} color = '#fff'/>
+                    <Ionicons name = {item.it} size={70} color = '#fff' onPress={() => navigation.navigate('Prijava')} title="LogOut"/>
                     <FontAwesome5 name = {item.it1} size={70} color = '#fff'/>
                 </Text>
                 <Text style={itemText}>{item.key}</Text>
-                
-
             </View>
         </TouchableOpacity>
         </ScrollView>
@@ -75,52 +86,5 @@ class App1 extends React.Component{
             />
         </View>
         )
-    }
-    
+    }   
 }
-
-// const Dashboard = () => {
-//     return (
-
-//         <StyledContainer>
-//             <StatusBar style="dark" />
-//             <InnerContainer>
-//                 <ButtonGrid> 
-//                     <NewButton>
-//                         <ButtonTextDash>
-//                             Provjera
-//                         </ButtonTextDash>
-//                     </NewButton>
-//                     <NewButton>
-//                         <ButtonTextDash>
-//                             Popis
-//                         </ButtonTextDash>
-//                     </NewButton>
-//                     <NewButton>
-//                         <ButtonTextDash>
-//                             Provjera dokumentacije
-//                         </ButtonTextDash>
-//                     </NewButton>
-//                     <NewButton>
-//                         <ButtonTextDash>
-//                             Kreiranje predracuna
-//                         </ButtonTextDash>
-//                     </NewButton>
-//                     <NewButton>
-//                         <ButtonTextDash>
-//                             Prijem robe
-//                         </ButtonTextDash>
-//                     </NewButton>
-//                     <NewButton>
-//                         <ButtonTextDash>
-//                             Prenos
-//                         </ButtonTextDash>
-//                     </NewButton>
-//                 </ButtonGrid>
-//             </InnerContainer>
-//         </StyledContainer>
-
-//     );
-// }
-
- export default App1;
