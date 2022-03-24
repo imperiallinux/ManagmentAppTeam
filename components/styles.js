@@ -42,8 +42,9 @@ export const InnerContainer = styled.View`
 `;
 
 export const PageLogo = styled.Image`
-  width: 180px;
-  height: 110px;
+  margin-vertical: 7px;
+  width: 170px;
+  height: 100px;
 `;
 
 export const PageTitle = styled.Text`
@@ -76,7 +77,6 @@ export const StyledTextInput = styled.TextInput`
   margin-bottom: 10px;
   color: ${drg};
   shadowOpacity: 0.9;
-  shadowRadius: 10;
   shadowOffset: {
     height: 2px,
     width: 2px,
@@ -117,13 +117,7 @@ export const StyledButton = styled.TouchableOpacity`
   margin-left: 45px;
   margin-right: 45px;
   height: 50px;
-  shadowOpacity: 0.9;
-  shadowRadius: 10;
-  shadowOffset: {
-    height: 2px,
-    width: 2px,
-  };
-  elevation: 15;
+  elevation: 5;
 `;
 
 export const ButtonText = styled.Text`
@@ -159,7 +153,7 @@ export const ButtonTextDash = styled.Text`
 `;
 
 export const TaskBar = styled.View`
-  padding-top: 10;
+  padding-top: 10px;
   flex: 1;
   width: 100%;
   height: 150%;

@@ -6,26 +6,24 @@ import App1 from "./Dashboard";
 import { ScrollView } from "react-native-gesture-handler";
 import { View } from "react-native";
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 
-const Drawer = createDrawerNavigator();
+
+
+import Prijava from '../masks/Prijava';
+import ServerPrijava from '../masks/ServerPrijava';
+
+
 const {stil, tamna} = Colors;
- 
+const Drawer = createDrawerNavigator();
+
+
 const TtaskBar = () =>{
-<Drawer.Navigator
-        screenOptions={{
-            drawerStyle: {
-              backgroundColor: '#c6cbef',
-              width: '70%',
-            },
-          }}
-        >
-            <Drawer.Screen name="Prijava" component={Prijava} />
-            <Drawer.Screen name="ServerPrijava" component={ServerPrijava} />
-        </Drawer.Navigator>
+
 return(
     
     <TaskBar>
-         
         <TaskBarButton>
             <Ionicons name = "menu" size={50} color = '#6D28D9'/>
         </TaskBarButton>

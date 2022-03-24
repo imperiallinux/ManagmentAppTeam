@@ -86,7 +86,7 @@ const Prijava = ({navigation}) => {
                         onChangeText={handleChange('objekat')}//trenutno mail
                         onBlur={handleBlur('objekat')}//trenutno mail
                         value={values.objekat}//trenutno mail
-                        keyboardType="text"//trenutno mail
+                        keyboardType="name-phone-pad"//trenutno mail
                         />
                         <MsgBox></MsgBox>
                         <StyledButton onPress = {()=> navigation.navigate("Dashboard")}>
