@@ -37,11 +37,9 @@ const styles  = StyleSheet.create({
         },
     });
 
-
 export default class App1 extends React.Component{
 
     _renderItem = ({item, index}) => {
-         
 
         const{itemStyle, itemText} = styles;
         return (
@@ -50,7 +48,7 @@ export default class App1 extends React.Component{
         <TouchableOpacity>
             <View style = {itemStyle}>
                 <Text style={itemText}>
-                    <Ionicons name = {item.it} size={70} color = '#fff' onPress={() => navigation.navigate('Prijava')} title="LogOut"/>
+                    <Ionicons name = {item.it} size={70} color = '#fff'/>
                     <FontAwesome5 name = {item.it1} size={70} color = '#fff'/>
                 </Text>
                 <Text style={itemText}>{item.key}</Text>
