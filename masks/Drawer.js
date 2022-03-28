@@ -8,9 +8,10 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
-import Prijava from './Prijava';
 
-function Feed({ navigation }) {
+const {stil, tamna} = Colors;
+
+function Feed( ) {
   return (
     <View>
       <App1></App1>
@@ -49,7 +50,7 @@ export default function MyDrawer() {
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
-      <Drawer.Screen name="Glavni Meni" component={Feed} />
+      <Drawer.Screen name="Glavni Meni" component={Feed} color = {stil} />
       <Drawer.Screen name="Podešavanja" component={Settings} />
     </Drawer.Navigator>
   );
