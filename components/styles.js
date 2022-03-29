@@ -25,20 +25,22 @@ export const StyledContainer = styled.View`
   padding: 1px;
   padding-top: 10px;
   background-color: ${simbol};
+  
 `;
+
 export const StyledContainerDash = styled.View`
   flex: 1;
   padding: 5px;
   padding-top: 5px;
   background-color: ${simbol};
-
+ 
 `;
 
 export const InnerContainer = styled.View`
   flex: 1;
   width: 100%;
   align-items: center;
-  
+ 
 `;
 
 export const PageLogo = styled.Image`

@@ -11,12 +11,13 @@ import {Colors} from "../components/styles";
 import Prijava from './Prijava';
 import ServerPrijava from './ServerPrijava'
 import { useNavigation } from '@react-navigation/native';
+import {Octicons,Ionicons} from '@expo/vector-icons';
 
 const {stil, tamna} = Colors;
 
 function Feed() {
   return (
-    <View color = {tamna}>
+    <View>
       <App1></App1>
     </View>
   );
@@ -37,8 +38,11 @@ function CustomDrawerContent(props) {
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
       <DrawerItem
-        label="Log Out"
+        icon={({ focused, color, size }) => 
+        <Ionicons color={focused ? '#6D28D9' : '#D7B8F0'} size={size} name={'ios-log-out'} /> }
+        label="Odjavi se"
         onPress = {()=> navigation.navigate("Prijava")}
+        inactiveTintColor='#6D28D9'
       />
     </DrawerContentScrollView>
   );
@@ -50,9 +54,35 @@ export default function MyDrawer() {
   return (
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
+      screenOptions={{
+        headerShown: true,
+        drawerActiveTintColor:"#B828FF",
+        drawerInactiveTintColor:"#6D28D9"
+      }}
     >
-      <Drawer.Screen name="Glavni Meni" component={Feed} color = {stil}/>
-      <Drawer.Screen name="Podešavanja" component={Settings} />
+      <Drawer.Screen name="Glavni Meni" component={Feed}  drawerActiveTintColor={'red'}
+      options={{
+        drawerIcon: ({focused, size}) => (
+        <Ionicons
+          name="md-bookmarks"
+          size={size}
+          color={focused ? '#6D28D9' : '#D7B8F0'}
+        />
+        ),
+      }}
+      />
+      <Drawer.Screen name="Podešavanja" component={Settings}
+        options={{
+          drawerIcon: ({focused, size}) => (
+          <Ionicons
+            name="settings"
+            size={size}
+            color={focused ? '#6D28D9' : '#D7B8F0'}
+          />
+          ),
+          color : 'red',
+        }}
+      />
       
     </Drawer.Navigator>
   );
