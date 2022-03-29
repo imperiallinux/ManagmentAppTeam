@@ -1,7 +1,7 @@
 import  React from 'react';
 //za navigaciju
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator  } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //Kako bi se prikazale maske moraju bit importovane
 import Prijava from './masks/Prijava';
 import ServerPrijava from './masks/ServerPrijava';
@@ -21,5 +21,6 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
 
 //ServerPrijava

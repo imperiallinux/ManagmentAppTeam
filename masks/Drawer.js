@@ -10,16 +10,19 @@ import {
 import { Octicons, Ionicons, FontAwesome5 } from '@expo/vector-icons';
 import {Colors} from "../components/styles";
 import Prijava from './Prijava';
+import ServerPrijava from './ServerPrijava'
+import { useNavigation } from '@react-navigation/native';
 
 const {stil, tamna} = Colors;
 
-function Feed({ navigation }) {
+function Feed() {
   return (
     <View color = {tamna}>
       <App1></App1>
     </View>
   );
 }
+
 
 function Settings() {
   return (
@@ -29,7 +32,8 @@ function Settings() {
   );
 }
 
-function CustomDrawerContent(props,{navigation}) {
+function CustomDrawerContent(props) {
+  const navigation = useNavigation();
   return (
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
@@ -49,6 +53,7 @@ export default function MyDrawer() {
     >
       <Drawer.Screen name="Glavni Meni" component={Feed} color = {'red'}/>
       <Drawer.Screen name="Podešavanja" component={Settings} />
+      
     </Drawer.Navigator>
   );
 }
