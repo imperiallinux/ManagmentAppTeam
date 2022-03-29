@@ -61,20 +61,20 @@ const ServerPrijava = ({navigation}) => {
                         icon="globe"
                         placeholder="192.0.0.7"
                         placeholderTextColor={tamna}
-                        onChangeText={handleChange('text')}
-                        onBlur={handleBlur('text')}
+                        onChangeText={handleChange('numeric')}
+                        onBlur={handleBlur('numeric')}
                         value={values.text}
-                        keyboardType="text"
+                        keyboardType="numeric"
                         />
                         <MyTextInput 
                         label="Port:"
                         icon="code"
                         placeholder=":3000"
                         placeholderTextColor={tamna}
-                        onChangeText={handleChange('port')}
-                        onBlur={handleBlur('port')}
+                        onChangeText={handleChange('numeric')}
+                        onBlur={handleBlur('numeric')}
                         value={values.port}
-                        keyboardType="text"
+                        keyboardType="numeric"
                         />
                         <MsgBox></MsgBox>
                         <StyledButton onPress = {()=> navigation.navigate("Prijava")}>

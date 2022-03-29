@@ -132,7 +132,7 @@ export const MsgBox = styled.Text`
 `;
 
 export const Line = styled.View`
-  height: 3px;
+  height: 1px;
   width: 100%;
   background-color: ${tamna};
 `;
