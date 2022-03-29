@@ -7,20 +7,12 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
-<<<<<<< HEAD
-
-const {stil, tamna} = Colors;
-
-function Feed( ) {
-=======
-import { Octicons, Ionicons, FontAwesome5 } from '@expo/vector-icons';
 import {Colors} from "../components/styles";
 import Prijava from './Prijava';
 
 const {stil, tamna} = Colors;
 
-function Feed({ navigation }) {
->>>>>>> 0af222bafc66cab87abb5733d5ad425f209617a4
+function Feed() {
   return (
     <View color = {tamna}>
       <App1></App1>
@@ -42,7 +34,7 @@ function CustomDrawerContent(props,{navigation}) {
       <DrawerItemList {...props} />
       <DrawerItem
         label="Log Out"
-        onPress={() => navigation.navigate('Prijava')}
+        onPress = {()=> navigation.navigate("Prijava")}
       />
     </DrawerContentScrollView>
   );
@@ -55,11 +47,7 @@ export default function MyDrawer() {
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
-<<<<<<< HEAD
-      <Drawer.Screen name="Glavni Meni" component={Feed} color = {stil} />
-=======
       <Drawer.Screen name="Glavni Meni" component={Feed} color = {stil}/>
->>>>>>> 0af222bafc66cab87abb5733d5ad425f209617a4
       <Drawer.Screen name="Podešavanja" component={Settings} />
     </Drawer.Navigator>
   );
