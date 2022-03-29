@@ -39,6 +39,7 @@ function CustomDrawerContent(props) {
       <DrawerItemList {...props} />
       <DrawerItem
         label="Log Out"
+        onPress={() => navigation.navigate('Prijava')}
       />
     </DrawerContentScrollView>
   );
@@ -51,7 +52,7 @@ export default function MyDrawer() {
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
-      <Drawer.Screen name="Glavni Meni" component={Feed} color = {'red'}/>
+      <Drawer.Screen name="Glavni Meni" component={Feed} color = {stil}/>
       <Drawer.Screen name="Podešavanja" component={Settings} />
       
     </Drawer.Navigator>
