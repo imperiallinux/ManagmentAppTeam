@@ -9,6 +9,8 @@ import {
 } from '@react-navigation/drawer';
 import {Colors} from "../components/styles";
 import Prijava from './Prijava';
+import ServerPrijava from './ServerPrijava'
+import { useNavigation } from '@react-navigation/native';
 
 const {stil, tamna} = Colors;
 
@@ -20,6 +22,7 @@ function Feed() {
   );
 }
 
+
 function Settings() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -28,7 +31,8 @@ function Settings() {
   );
 }
 
-function CustomDrawerContent(props,{navigation}) {
+function CustomDrawerContent(props) {
+  const navigation = useNavigation();
   return (
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
@@ -49,6 +53,7 @@ export default function MyDrawer() {
     >
       <Drawer.Screen name="Glavni Meni" component={Feed} color = {stil}/>
       <Drawer.Screen name="Podešavanja" component={Settings} />
+      
     </Drawer.Navigator>
   );
 }

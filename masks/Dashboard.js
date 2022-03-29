@@ -53,8 +53,8 @@ export default class App1 extends React.Component{
 
 const styles  = StyleSheet.create({
     container: {
-        paddingTop: 12,
-        paddingBottom: 50,
+        paddingTop: 3,
+        paddingBottom: 1,
     },
       
     itemStyle: {
