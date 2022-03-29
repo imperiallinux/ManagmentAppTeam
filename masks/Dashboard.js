@@ -5,37 +5,12 @@ import { Octicons, Ionicons, FontAwesome5 } from '@expo/vector-icons';
 import { InnerContainer, StyledContainerDash} from '../components/styles';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { ServerStyleSheet } from 'styled-components';
-import TtaskBar from './GlavnaMaska';
-import Prijava from './Prijava';
-import ServerPrijava from './ServerPrijava';
 
 const dataList = [{ key: 'Skeniranje' ,it: 'qr-code-outline'}, { key: 'Popis', it1: 'clipboard-list' }, 
 { key: 'Kreiranje predračuna' , it1: 'file-invoice-dollar'}, ,{ key: 'Provjera dokumenta',it1: 'clipboard-check' },
 { key: 'Prijem robe',it1:'cubes' }, { key: 'Prenos', it1: 'truck'}]
 const numColumns = 2
-const styles  = StyleSheet.create({
-        container: {
-            paddingTop: 12,
-            paddingBottom: 50,
-        },
-      
-        itemStyle: {
-          backgroundColor: '#6D28D9',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: 150, 
-          flex: 1,
-          borderRadius: 7,
 
-        },
-      
-        itemText: { 
-          color: '#fff',
-          fontSize: 20,
-          textAlign: 'center',
-          justifyContent: 'center',
-        },
-    });
 
 export default class App1 extends React.Component{
 
@@ -75,3 +50,26 @@ export default class App1 extends React.Component{
         )
     }   
 }
+
+const styles  = StyleSheet.create({
+    container: {
+        paddingTop: 12,
+        paddingBottom: 50,
+    },
+      
+    itemStyle: {
+        backgroundColor: '#6D28D9',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 150, 
+        flex: 1,
+        borderRadius: 7,
+    },
+      
+    itemText: { 
+        color: '#fff',
+        fontSize: 20,
+        textAlign: 'center',
+        justifyContent: 'center',
+    },
+});
